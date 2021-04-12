@@ -1,0 +1,45 @@
+<html>
+<head>
+  <title>CS Oversight Review</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+  {{{ css }}}
+
+  <style type="text/css">
+    #content {
+      background-color: #EFEFEF;
+      position: relative;
+    }
+    #topbar {
+      height: 50px;
+      background-color: #1C408B;
+    }
+    #topbar.user {
+      float: right;
+      color: #EFEFEF;
+    }
+    #sidebar {
+      width: 20%;
+      float: left;
+      background-color: #F8F8F8;
+      color: #313537;
+      padding: 10px;
+      overflow-y: scroll;
+    }
+    #toolbar {
+      padding-bottom: 15px;
+    }
+  </style>
+</head>
+<body>
+<div id="topbar">
+  <p class="user">
+  {{{ userName }}}
+  </p>
+</div>
+<div id="content">
+  {{{ body }}}
+</div>
+{{{ javascript }}}
+</body>
+</html>

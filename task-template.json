@@ -1,0 +1,29 @@
+{
+  "executionRoleArn": "arn:aws:iam::072699300807:role/ecsTaskExecutionRole",
+  "containerDefinitions": [
+    {
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/ecs/asset-cloud-oversight",
+          "awslogs-region": "us-east-1",
+          "awslogs-stream-prefix": "ecs"
+        }
+      },
+      "portMappings": [
+        {
+          "hostPort": 8080,
+          "protocol": "tcp",
+          "containerPort": 8080
+        }
+      ],
+      "memoryReservation": 4096,
+      "image": "072699300807.dkr.ecr.us-east-1.amazonaws.com/oversight_review:latest",
+      "name": "asset-inventory"
+    }
+  ],
+  "memory": "4096",
+  "family": "asset-cloud-oversight",
+  "networkMode": "awsvpc",
+  "cpu": "2048"
+}
